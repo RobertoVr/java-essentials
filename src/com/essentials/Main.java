@@ -1,8 +1,6 @@
 package src.com.essentials;
 
-import src.com.essentials.java.functional.BiFunctionInterface;
-import src.com.essentials.java.functional.ConsumerInterface;
-import src.com.essentials.java.functional.FunctionInterface;
+import src.com.essentials.java.functional.*;
 
 public class Main {
 
@@ -18,6 +16,12 @@ public class Main {
         new BiFunctionInterface().function();
         System.out.println("--------------------------");
         new ConsumerInterface().function();
+        System.out.println("--------------------------");
+        new BiConsumerInterface().function();
+        System.out.println("--------------------------");
+        new PredicateInterface().function();
+        System.out.println("--------------------------");
+        new SupplierInterface().function();
     }
 
 }
