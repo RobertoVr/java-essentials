@@ -7,7 +7,7 @@ import java.util.function.Consumer;
  *
  * */
 public class ConsumerInterface extends FunctionBase {
-    @Override
+
     public void function() {
         System.out.println("Consumer interface, represents an operation that accepts a single input argument and returns no result");
         Customer customer = new Customer("Rbr", "001010");
