@@ -1,7 +1,9 @@
 package src.com.essentials;
 
 import src.com.essentials.java.functional.*;
-import src.com.essentials.java.streams._Stream;
+import src.com.essentials.java.functional.combinatorPattern._Combinator;
+import src.com.essentials.java.functional.optionals._Optionals;
+import src.com.essentials.java.functional.streams._Stream;
 
 public class Main {
 
@@ -9,7 +11,8 @@ public class Main {
 
         functionalProgramming();
         streamFunctionalProgramming();
-
+        optionalFunctionalProgramming();
+        combinatorFunctionalProgramming();
     }
 
     private static void functionalProgramming() {
@@ -18,9 +21,6 @@ public class Main {
         new BiFunctionInterface().function();
         System.out.println("--------------------------");
         new ConsumerInterface().function();
-
-        new ConsumerInterface().inicio.function();
-
         System.out.println("--------------------------");
         new BiConsumerInterface().function();
         System.out.println("--------------------------");
@@ -33,5 +33,12 @@ public class Main {
         System.out.println("--------------------------");
         new _Stream().function();
     }
-
+    public static void optionalFunctionalProgramming(){
+        System.out.println("--------------------------");
+        new _Optionals().function();
+    }
+    public static void combinatorFunctionalProgramming(){
+        System.out.println("--------------------------");
+        new _Combinator().function();
+    }
 }

@@ -1,9 +1,11 @@
-package src.com.essentials.java.streams;
+package src.com.essentials.java.functional.streams;
 
 import src.com.essentials.java.functional.FunctionBase;
 
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.function.Function;
+import java.util.function.IntConsumer;
+import java.util.function.ToIntFunction;
 
 public class _Stream extends FunctionBase {
 
@@ -24,11 +26,21 @@ public class _Stream extends FunctionBase {
                 new Person("the rock", Person.Gender.MALE)
         );
 
-        people.stream()
-                .map(person -> person.name)
-                .mapToInt(String::length)
-                .forEach(System.out::println);
+        Function<Person, String> personStringFunction = person -> person.name;
 
+        ToIntFunction<String> length = String::length;
+
+        IntConsumer println = System.out::println;
+
+        people.stream()
+                .map(personStringFunction)
+                .mapToInt(length)
+                .forEach(println);
+
+        boolean isGender = people.stream()
+                .anyMatch(person -> Person.Gender.FEMALE.equals(person.gender));
+
+        System.out.println(isGender);
 
     }
 
