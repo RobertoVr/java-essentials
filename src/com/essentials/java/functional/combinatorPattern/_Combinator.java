@@ -4,7 +4,7 @@ import src.com.essentials.java.functional.FunctionBase;
 
 import java.time.LocalDate;
 
-import static src.com.essentials.java.functional.combinatorPattern.CustumerRegistrationValidator.*;
+import static src.com.essentials.java.functional.combinatorPattern.CustomerRegistrationValidator.*;
 
 public class _Combinator extends FunctionBase {
 

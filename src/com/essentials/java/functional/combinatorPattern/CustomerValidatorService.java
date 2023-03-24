@@ -3,7 +3,7 @@ package src.com.essentials.java.functional.combinatorPattern;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class CustumerValidatorService {
+public class CustomerValidatorService {
 
     private boolean isEmailValid(String email) {
         return email.contains("@");

@@ -1,6 +1,7 @@
 package src.com.essentials;
 
 import src.com.essentials.java.functional.*;
+import src.com.essentials.java.functional.callback._Callbacks;
 import src.com.essentials.java.functional.combinatorPattern._Combinator;
 import src.com.essentials.java.functional.optionals._Optionals;
 import src.com.essentials.java.functional.streams._Stream;
@@ -13,6 +14,7 @@ public class Main {
         streamFunctionalProgramming();
         optionalFunctionalProgramming();
         combinatorFunctionalProgramming();
+        callBackFunctionalProgramming();
     }
 
     private static void functionalProgramming() {
@@ -40,5 +42,9 @@ public class Main {
     public static void combinatorFunctionalProgramming(){
         System.out.println("--------------------------");
         new _Combinator().function();
+    }
+    public static void callBackFunctionalProgramming(){
+        System.out.println("--------------------------");
+        new _Callbacks().function();
     }
 }

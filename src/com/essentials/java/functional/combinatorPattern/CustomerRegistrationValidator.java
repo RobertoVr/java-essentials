@@ -4,29 +4,29 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.function.Function;
 
-import static src.com.essentials.java.functional.combinatorPattern.CustumerRegistrationValidator.*;
+import static src.com.essentials.java.functional.combinatorPattern.CustomerRegistrationValidator.*;
 
-public interface CustumerRegistrationValidator extends Function<Customer, ValidationResult> {
+public interface CustomerRegistrationValidator extends Function<Customer, ValidationResult> {
 
-    static CustumerRegistrationValidator isEmailValid() {
+    static CustomerRegistrationValidator isEmailValid() {
         return customer -> customer.getEmail().contains("@") ?
                 ValidationResult.SUCCESS :
                 ValidationResult.EMAIL_NOT_VALID;
     }
 
-    static CustumerRegistrationValidator isPhoneNumberValid() {
+    static CustomerRegistrationValidator isPhoneNumberValid() {
         return customer -> customer.getPhoneNumber().startsWith("54") ?
                 ValidationResult.SUCCESS :
                 ValidationResult.PHONE_NUMBER_NOT_VALID;
     }
 
-    static CustumerRegistrationValidator isAdult() {
+    static CustomerRegistrationValidator isAdult() {
         return customer -> Period.between(customer.getDob(), LocalDate.now()).getYears() > 16 ?
                 ValidationResult.SUCCESS :
                 ValidationResult.IS_NOT_ADULT;
     }
 
-    default CustumerRegistrationValidator and(CustumerRegistrationValidator other) {
+    default CustomerRegistrationValidator and(CustomerRegistrationValidator other) {
         return customer -> {
             ValidationResult result = this.apply(customer);
             return result.equals(ValidationResult.SUCCESS) ? other.apply(customer) : result;
