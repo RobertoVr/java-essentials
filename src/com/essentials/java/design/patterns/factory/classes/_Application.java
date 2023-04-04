@@ -9,12 +9,18 @@ import java.util.List;
 public class _Application {
     public List<Character> characters = new ArrayList<>();
 
-    public void build(CFactory factory, String name){
-        characters.add(factory.createNewCharacter(name));
-
+    public void build(CFactory factory, CharacterProps props) {
+        characters.add(factory.createNewCharacter(props));
     }
-    public void print(){
-        this.characters.stream().forEach(c -> c.newCharacter());
+
+    public void print() {
+        this.characters.stream().forEach(c -> {
+            System.out.println("-----> #Character: ");
+            c.greetNewCharacter();
+            c.getKindAttack();
+            c.health();
+            c.isArmed();
+        });
     }
 
 }

@@ -23,8 +23,9 @@ public class _Factory extends FunctionBase {
     private _Application configCharacters(){
         _Application app = new _Application();
 
-        app.build(new _HeroFactory(), "hulk");
-        app.build(new _VillainFactory(), "venom");
+        app.build(new _HeroFactory(), new CharacterProps(10, "hulk", "Hero", "smash"));
+        app.build(new _VillainFactory(), new CharacterProps(20, "Venom", "Villain", "Mind Control"));
+
 
         return app;
 

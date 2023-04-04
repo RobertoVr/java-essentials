@@ -51,6 +51,7 @@ public class Main {
     }
 
     private static void factoryPattern(){
+        System.out.println("------------FACTORY--------------");
         new _Factory().function();
     }
 }

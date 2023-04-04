@@ -1,5 +1,7 @@
 package src.com.essentials.java.design.patterns.factory.interfaces;
 
+import src.com.essentials.java.design.patterns.factory.classes.CharacterProps;
+
 public interface CFactory {
-    Character createNewCharacter(String name);
+    Character createNewCharacter(CharacterProps props);
 }
