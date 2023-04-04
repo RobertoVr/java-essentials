@@ -1,5 +1,6 @@
 package src.com.essentials;
 
+import src.com.essentials.java.design.patterns.factory._Factory;
 import src.com.essentials.java.functional.*;
 import src.com.essentials.java.functional.callback._Callbacks;
 import src.com.essentials.java.functional.combinatorPattern._Combinator;
@@ -15,6 +16,7 @@ public class Main {
         optionalFunctionalProgramming();
         combinatorFunctionalProgramming();
         callBackFunctionalProgramming();
+        factoryPattern();
     }
 
     private static void functionalProgramming() {
@@ -46,5 +48,9 @@ public class Main {
     public static void callBackFunctionalProgramming(){
         System.out.println("--------------------------");
         new _Callbacks().function();
+    }
+
+    private static void factoryPattern(){
+        new _Factory().function();
     }
 }
